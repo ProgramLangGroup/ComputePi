@@ -1,4 +1,4 @@
-class Pie:
+class Pi:
     def __init__(self, name, last):
         self.first = name
         self.last = last
