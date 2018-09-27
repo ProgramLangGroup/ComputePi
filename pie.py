@@ -1,20 +1,20 @@
 class Pie:
-    def __init__(self, name, surname):
-        self.name = name
-        self.surname = surname
+    def __init__(self, name, last):
+        self.first = name
+        self.last = last
 
     @property
     def fullname(self):
-        return "%s %s" % (self.name, self.surname)
+        return "%s %s" % (self.first, self.last)
 
     @fullname.setter
     def fullname(self, value):
         # this is much more complicated in real life
-        name, surname = value.split(" ", 1)
-        self.name = name
-        self.surname = surname
+        first, last = value.split(" ", 1)
+        self.first = first
+        self.last = last
 
     @fullname.deleter
     def fullname(self):
-        del self.name
-        del self.surname
+        del self.first
+        del self.last
